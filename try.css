@@ -119,6 +119,9 @@ section{
   }
 .avatar:hover{
     transform: scale(1.3);
+    /* HOW TO ZOON ON HOVER
+    https://www.w3schools.com/howto/howto_css_zoom_hover.asp
+    */
 }
 body {
     background-image: url("wallpaper.jpg");
@@ -130,4 +133,7 @@ Sand Tan Shadow: #c89666
 
 Night Blue: #2d545e
 
-Night Blue Shadow: #12343b */
+Night Blue Shadow: #12343b 
+
+https://hookagency.com/blog/website-color-schemes-2020/
+*/
