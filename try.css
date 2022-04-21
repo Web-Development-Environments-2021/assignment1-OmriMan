@@ -279,3 +279,12 @@ https://hookagency.com/blog/website-color-schemes-2020/
   .vertical-center:hover {
     opacity: 1;
   }
+  table, th, td {
+    border:1px solid black;
+    margin-left: 10%;
+    font-size: 150%;
+    border-spacing: 5px ;
+  }
+  th, td {
+    padding: 15px;
+  }
