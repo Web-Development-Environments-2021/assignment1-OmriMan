@@ -240,6 +240,7 @@ https://hookagency.com/blog/website-color-schemes-2020/
   }
   .column img:hover{
     transform: scale(1.5);
+    overflow: hidden;
 
 }
   
@@ -273,7 +274,7 @@ https://hookagency.com/blog/website-color-schemes-2020/
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
     overflow: hidden;
-    opacity: 0.8;
+    opacity: 0.9;
   }
   .vertical-center:hover {
     opacity: 1;
