@@ -2,7 +2,7 @@ ul {
 list-style-type: none;
 margin: 0;
 padding: 0;
-overflow: hidden;
+overflow: visible;
 background-color: #2d545e;
 position: fixed;
 top: 0;
@@ -200,7 +200,7 @@ h4 {
 
 body {
     background-image: url("wallpaper.jpg");
-    background-color: #cccccc;
+    background-color: #f5d9bc;
   }
   /* Sand Tan: #e1b382
 
@@ -254,4 +254,24 @@ https://hookagency.com/blog/website-color-schemes-2020/
       flex: 100%;
       max-width: 100%;
     }
+  }
+
+  .container { 
+    height: auto;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .vertical-center {
+    margin-left: 42%;
+    margin-top: 15%;
+    position: relative;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    overflow: hidden;
+    opacity: 0.4;
+  }
+  .vertical-center:hover {
+    opacity: 1;
   }
