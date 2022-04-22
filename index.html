@@ -240,21 +240,20 @@ contact me
 </h1>
 <h2>
   <table style="width: 80%; border:1px solid #e1b382;">
-    <form action="mailto:manomri@post.bgu.ac.il" method="post" enctype="text/plain">
+    <!-- <form action="mailto:manomri@post.bgu.ac.il" method="post" enctype="text/plain"> -->
     <tr>
-      <td>Name:<br> <input type="text" name="My name is" placeholder="e.g Yaniv Katan"><br></td>
+      <td>Name:<br> <input type="text"  placeholder="e.g Yaniv Katan" id="sender_name"><br></td>
     </tr>
     <tr>
-      <td>E-mail: <br><input type="text"  placeholder="e.g YanivKatan20@TheKing.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"><br></td>
+      <td>E-mail: <br><input type="text"  placeholder="e.g YanivKatan20@TheKing.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" id="sender_mail"><br></td>
     </tr>
     <tr>
-      <td>Comment: <br><textarea id="mytextarea" name="My massage is: " placeholder="e.g Hi Ivar, U R the best dog ever and I love U, but..." ></textarea></td>
+      <td>Comment: <br><textarea id="mytextarea" placeholder="e.g Hi Ivar, U R the best dog ever and I love U, but..." ></textarea></td>
     </tr>
     <tr>
-      <td><input type="submit" value="Send"></td>
-    </tr>
-    <tr>
-      <td><input type="reset" value="Reset"></td>
+      <td><button class="button" id="send_email" onclick="sendMail();">Send</button>
+        <!-- <input type="submit" value="Send"> -->
+      </td>
     </tr>
   </table>
 </h2>
@@ -262,6 +261,29 @@ contact me
 <br/>
 <br/>
 </section>
+
+<!-- send mail -->
+<script type="text/javascript">
+  function sendMail(){
+    var s_name = sender_name.value
+    var s_mail = sender_mail.value
+    if (!(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(s_mail)))
+    {
+      alert("You have entered an invalid email address!")
+      return (false)
+    }
+    var massage = tinymce.get("mytextarea").getContent().slice(3,-4)
+    if (massage === "")
+    {
+      var massage = "Hi Ivar, U R the best dog ever and I love U"
+    }
+    if (s_name === "")
+    {
+      var s_name = s_mail.split('@')[0];
+    }
+    window.open("mailto:manomri@post.bgu.ac.il?subject=Take me Ivar&body=" + massage +"         Thanks, " + s_name + " ," + s_mail);
+  }
+</script>
 
 
 <script type="text/javascript">
