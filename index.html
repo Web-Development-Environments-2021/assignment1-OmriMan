@@ -22,7 +22,7 @@
 </script>
 <!--  -->
 </head>
-<body>
+<body onload="heyU();">
 <div id="menu">
 <ul>
 <a href="#menu" ><img src=photos\face.jpg style="float:left" class="avatar"/></a>
@@ -42,6 +42,11 @@
 <h3>
   <br/>
   <br/>
+  <h2 id="demo" style="color: black;">
+    <audio id="myAudio" controls autoplay>
+      <source src="hi.ogg" type="audio/ogg">
+    </audio>
+  </h2>
   <!-- <img src=photos\s1.jpeg class="avatar_header"/><img src=photos\s2.jpeg class="avatar_header"/><img src=photos\s3.jpeg class="avatar_header"/><img src=photos\s4.jpeg class="avatar_header"/><img src=photos\s5.jpeg class="avatar_header"/><img src=photos\s6.jpeg class="avatar_header"/><img src=photos\s7.jpeg class="avatar_header"/> -->
   <br/>
 </h3>
@@ -373,5 +378,18 @@ $(function(){
     $('#menu').toggle($(this).scrollTop()>1000)
  });​
  </script>
+
+<script>
+  function heyU() {
+    let text;
+    let person = prompt("Good to see you here !\n Please enter your name:", "Harry Potter");
+    if (person == null || person == "") {
+      text = "I wonder why you did not want to tell us your name ... Playing yourself mysterious?";
+    } else {
+      text = "Hello " + person + "! I hope you are ready for a once in a lifetime experience";
+    }
+    document.getElementById("demo").innerHTML = text;
+  }
+  </script>
 </body>
 </html>
