@@ -38,17 +38,53 @@
 <li style="float:right"><a href="#contact">Contact Me</a></li>
 </ul>
 <ul_down_right>
+  <!-- https://wa.me/+972525216644 -->
+  <div><a href="menu" onclick="send_whatsapp();"><img src="whatsapp_icon.jpg" class="avatar_scroll"/></a></div>
   <div><a href="#like"><img src="like_logo.png" class="avatar_scroll"/></a></div>
   <div><a href="#contact"><img src="mail_logo.jpg" class="avatar_scroll"/></a></div>
   <div><a href="#qrcoder"><img src=QR.jpg class="avatar_text"/> </a></div>
   <div onscroll="scroll_Func();"><a href="#menu" ><img src="photos\football.jpg" id="pic" class="avatar_scroll"></a></div>
 </ul_down_right>
 </div>
+<ul_down_left>
+  <!-- <div class="cube-container">
+    <div class="cube">
+      <div class="cube__face front"></div>
+      <div class="cube__face back"></div>
+      <div class="cube__face right"></div>
+      <div class="cube__face left"></div>
+      <div class="cube__face top"></div>
+      <div class="cube__face bottom"></div>
+    </div>
+  </div><br>
+    <div class="cube-container">
+    <div class="cube">
+      <div class="cube__face front1"></div>
+      <div class="cube__face back1"></div>
+      <div class="cube__face right1"></div>
+      <div class="cube__face left1"></div>
+      <div class="cube__face top1"></div>
+      <div class="cube__face bottom1"></div>
+    </div>
+  </div><br>
+    </div>
+    <div class="cube-container">
+    <div class="cube">
+      <div class="cube__face front2"></div>
+      <div class="cube__face back2"></div>
+      <div class="cube__face right2"></div>
+      <div class="cube__face left2"></div>
+      <div class="cube__face top2"></div>
+      <div class="cube__face bottom2"></div>
+    </div>
+  </div> -->
+
+</ul_down_left>
 <br/>
 <h3>
   <br/>
   <br/>
-  <div class="fly_face"></div>
+  <!-- <div class="fly_face"></div> -->
   <h2 id="demo" >
   </h2>
   <!-- <img src=photos\s1.jpeg class="avatar_header"/><img src=photos\s2.jpeg class="avatar_header"/><img src=photos\s3.jpeg class="avatar_header"/><img src=photos\s4.jpeg class="avatar_header"/><img src=photos\s5.jpeg class="avatar_header"/><img src=photos\s6.jpeg class="avatar_header"/><img src=photos\s7.jpeg class="avatar_header"/> -->
@@ -95,10 +131,11 @@
     </div>
     <br>Yo bitches, my name is <u>Ivar</u><br/>I'm a year and a half old. My family broke up when I was two and a half<br/>months old and I do not know where my biological siblings are<img src=photos\old_times.jpeg class="avatar_text"/>
       <br/><img src=photos\momi.JPG class="avatar_text"/>Koral ("Korahel") and Ran<img src=photos\dad.jpeg class="avatar_text"/> took me under their wing and now I have a prince's life!
-    <br/><u>I have 3 stepbrothers:</u>
-    <br/><img src=photos\hilik_f1.jpg class="avatar_text"/>Hilik (German Shepherd) <img src=photos\face_hilik.jpg class="avatar_text"/><br/>
-    <img src=photos\Inkedshula_love_LI.jpg class="avatar_text"/>Shula (Boston Terrier)<img src=photos\sul.jpeg class="avatar_text"/><br/>
-    <img src=photos\hatul_f1.jpg class="avatar_text"/>"Hatul"  RIP (Gangster Cat)<img src=photos\hatul_face.jpg class="avatar_text"/>
+    <br/><u>I have 4 stepbrothers:</u>
+    <br/><img src=photos\hilik_f1.jpg class="avatar_text"/>Hilik (German Shepherd) <img src=photos\face_hilik.jpg class="avatar_text"/><br/><br/>
+    <img src=photos\Inkedshula_love_LI.jpg class="avatar_text"/>Shula (Boston Terrier)<img src=photos\sul.jpeg class="avatar_text"/><br/><br/>
+    <img src=photos\hatul_f1.jpg class="avatar_text"/>Hatul  RIP (Gangster Cat)<img src=photos\hatul_face.jpg class="avatar_text"/><br/><br/>
+    <img src=photos\fifi.JPG class="avatar_text"/>FiFI (Black belt in Karate)<img src=photos\fifi1.JPG class="avatar_text"/>
     <br/>
     <p><u>Something interesting that is important to know about me:</u>
     <br/>I was born right at the beginning of the Covid-19 epidemic and only recently discovered that face masks are not part of the human face. <br/><img src=photos\mask.GIF class="avatar_hobby"/></p>
@@ -335,7 +372,8 @@
     </tr>
     <tr>
       <td><button class="button" id="send_email" onclick="sendMail();">Send</button><br>
-        <div class="cube-container">
+        <div class="fly_face"></div>
+        <!-- <div class="cube-container">
           <div class="cube">
             <div class="cube__face front"></div>
             <div class="cube__face back"></div>
@@ -365,7 +403,7 @@
             <div class="cube__face top2"></div>
             <div class="cube__face bottom2"></div>
           </div>
-        </div>
+        </div> -->
         <!-- <input type="submit" value="Send"> -->
       </td>
     </tr>
@@ -433,15 +471,21 @@ $(function(){
       document.getElementById("face").src = "photos\\face.jpg";
     } else if (rand==1) {
       document.getElementById("pic").src = "photos\\rrr.jpeg"; 
-      document.getElementById("face").src = "photos\\s1.jpeg";
+      document.getElementById("face").src = "photos\\face1.jpg";
     } else if(rand==2) {
       document.getElementById("pic").src = "photos\\football.jpg"; 
-      document.getElementById("face").src = "photos\\pi.PNG";
+      document.getElementById("face").src = "photos\\face2.png";
     } else {
       document.getElementById("pic").src = "photos\\ball.jpg"; 
-      document.getElementById("face").src = "photos\\beach1.jpg";
+      document.getElementById("face").src = "photos\\face3.jpeg";
     }
   }
+
+  // <!-- https://wa.me/+972525216644 -->
+  function send_whatsapp() {
+    window.open("https://wa.me/+972525216644", "_blank");
+  }
+  
   </script>
 
 

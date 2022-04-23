@@ -22,14 +22,24 @@ ul_down_right {
     position: fixed;
     bottom: 0;
     right: 0;
-    left: 95vw;
-    width: 100%;
-    transition: border-width 0.4s;
+    /* left: 95vw; */
     opacity: 1;
-    z-index: 999;
     margin-bottom: 2vh;
     margin-right: 1vw;
-    }
+}
+
+ul_down_left {
+    list-style-type: none;
+    overflow: visible;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    /* left: 95vw; */
+    opacity: 0.6;
+    margin-bottom: 2vh;
+    margin-left: 1vw;
+    
+}
 
 li {
 float: left;
@@ -156,6 +166,9 @@ section{
     border-radius: 50%;
     transition: transform .5s;
     overflow: visible;
+}
+.avatar_scroll:hover {
+    transform: scale(1.8);
 }
 .avatar_text {
     vertical-align: middle;
@@ -590,7 +603,7 @@ input[type=submit]:hover ,input[type=reset]:hover , .button:hover{
     background-size: cover;
     position: relative;
     animation-name: example;
-    animation-duration: 30s;
+    animation-duration: 20s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
     border-radius: 20%;
@@ -599,10 +612,10 @@ input[type=submit]:hover ,input[type=reset]:hover , .button:hover{
 
   @keyframes example {
     0%   {background-image: url("photos\\beach.jpg");background-position: center; background-size: cover; left:0px; top:0px;}
-    25%  {background-image: url("photos\\ball.jpg");background-position: center; background-size: cover; left:80vw; top:0px;}
-    50%  {background-image: url("photos\\play.jpg"); background-position: center; background-size: cover; left:0px; top:0px;right: 80vw;}
-    75%  {background-image: url("photos\\s1.jpeg"); background-position: center; background-size: cover; left:80vw; top:0px;}
-    100% {background-image: url("photos\\sweetie.jpg"); background-position: center; background-size: cover; left:0px; top:0px; right: 80vw;}
+    25%  {background-image: url("photos\\ball.jpg");background-position: center; background-size: cover; left:40vw; top:0px;}
+    50%  {background-image: url("photos\\play.jpg"); background-position: center; background-size: cover; left:0px; top:0px;right: 40vw;}
+    75%  {background-image: url("photos\\s1.jpeg"); background-position: center; background-size: cover; left:40vw; top:0px;}
+    100% {background-image: url("photos\\sweetie.jpg"); background-position: center; background-size: cover; left:0px; top:0px; right: 40vw;}
   }
   .fly_face:hover {
     width: 150px;
