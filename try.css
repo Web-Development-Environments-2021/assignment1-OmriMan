@@ -166,9 +166,11 @@ section{
     border-radius: 50%;
     transition: transform .5s;
     overflow: visible;
+    opacity: 0.3;
 }
 .avatar_scroll:hover {
     transform: scale(1.8);
+    opacity: 1;
 }
 .avatar_text {
     vertical-align: middle;
