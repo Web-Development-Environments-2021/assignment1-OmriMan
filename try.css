@@ -13,7 +13,23 @@ border-left: 5px #12343b;
 transition: border-width 0.4s;
 opacity: 1;
 z-index: 999;
+border-radius: 15px 50px 30px;
 }
+
+ul_down_right {
+    list-style-type: none;
+    overflow: visible;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 95%;
+    width: 100%;
+    transition: border-width 0.4s;
+    opacity: 1;
+    z-index: 999;
+    margin-bottom: 2vh;
+    margin-right: 1vw;
+    }
 
 li {
 float: left;
@@ -58,6 +74,7 @@ h1 {
     -webkit-text-stroke: 0.8px #c89666;
     border-left: 5px #c89666 solid;
     transition: border-width 0.4s;
+    border-radius: 15px 50px 30px;
     
 }
 h1:hover {
@@ -132,6 +149,14 @@ section{
     https://www.w3schools.com/howto/howto_css_zoom_hover.asp
     */
 }
+.avatar_scroll {
+    vertical-align: middle;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    transition: transform .5s;
+    overflow: visible;
+}
 .avatar_text {
     vertical-align: middle;
     width: 80px;
@@ -139,13 +164,17 @@ section{
     border-radius: 50%;
     transition: transform .2s;
     overflow: hidden;
+    opacity: 0.95;
 }
 .avatar_text:hover{
     transform: scale(2.5);
+    opacity: 1;
     border-radius: 5%
+    
     /* HOW TO ZOON ON HOVER
     https://www.w3schools.com/howto/howto_css_zoom_hover.asp
     */
+    
 }
 .avatar_hobby {
     vertical-align: middle;
@@ -302,6 +331,7 @@ https://hookagency.com/blog/website-color-schemes-2020/
     background-color: #ffffff;
     color: #2d545e;
     font-size: 25%;
+    border-radius: 15px 50px 30px;
   }
 
   /* input type submit and reset */
@@ -334,6 +364,7 @@ input[type=submit]:hover ,input[type=reset]:hover , .button:hover{
     font-size: 50%;
     margin: 8px 0;
     cursor: pointer;
+    border-radius: 15px 50px 30px;
   }
 
 
@@ -346,19 +377,24 @@ input[type=submit]:hover ,input[type=reset]:hover , .button:hover{
 	perspective: 800px;
 	margin: auto;
     display: inline-block;
+    opacity: 0.9;
 }
 .cube-container:hover {
     transform: scale(1.5);
+    opacity: 1;
 }
 .cube {
     width: 100%;
     height: 100%;
     position: relative;
     transform-style: preserve-3d;
+    /* -webkit-animation: 15s linear rotate infinite;
+    -moz-animation: 15s linear rotate infinite; */
     -webkit-animation: 15s linear rotate infinite;
-    -moz-animation: 15s linear rotate infinite;
+    animation: 15s linear rotate infinite;
     transform: translateZ(-100px);
     display: inline-block;
+
     
 
 }
@@ -368,8 +404,11 @@ input[type=submit]:hover ,input[type=reset]:hover , .button:hover{
     width: 100px;
     height: 100px;
     border-radius: 5%;
+    opacity: 0.9;
 }
-
+.cube__face:hover {
+    opacity: 1;
+}
 
 .front  { background-image: url("photos\\s1.jpeg");
     background-position: center;
@@ -541,3 +580,39 @@ input[type=submit]:hover ,input[type=reset]:hover , .button:hover{
         transform: translateZ(-150px) rotateY(   0deg);
     }
 }
+
+.fly_face {
+    width: 150px;
+    height: 150px;
+    margin-left: 10vw;
+    background-image: url("photos\\face.jpg");
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    animation-name: example;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    border-radius: 20%;
+    opacity: 0.9;
+  }
+
+  @keyframes example {
+    0%   {background-image: url("photos\\beach.jpg");background-position: center; background-size: cover; left:0px; top:0px;}
+    25%  {background-image: url("photos\\ball.jpg");background-position: center; background-size: cover; left:80vw; top:0px;}
+    50%  {background-image: url("photos\\play.jpg"); background-position: center; background-size: cover; left:0px; top:0px;right: 80vw;}
+    75%  {background-image: url("photos\\s1.jpeg"); background-position: center; background-size: cover; left:80vw; top:0px;}
+    100% {background-image: url("photos\\sweetie.jpg"); background-position: center; background-size: cover; left:0px; top:0px; right: 80vw;}
+  }
+  .fly_face:hover {
+    width: 150px;
+    height: 150px;
+    animation-play-state:paused;
+    border-radius: 20%;
+    transform: scale(1.2);
+    opacity: 1;
+
+  }
+
+
+  

@@ -22,10 +22,10 @@
 </script>
 <!--  -->
 </head>
-<body onload="heyU();">
+<body onload="heyU();" onscroll="scroll_Func();">
 <div id="menu">
 <ul>
-<a href="#menu" ><img src=photos\face.jpg style="float:left" class="avatar"/></a>
+<a href="#menu" ><img src=photos\face.jpg style="float:left" class="avatar" id="face"/></a>
 <li><a href="#about">About Me</a></li>
 <li><a href="#photos">My Photos</a></li>
 <li><a href="#playlist">My Playlist</a></li>
@@ -37,15 +37,19 @@
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/he_IL/sdk.js#xfbml=1&version=v13.0" nonce="eg2BO3O7"></script>
 <li style="float:right"><a href="#contact">Contact Me</a></li>
 </ul>
+<ul_down_right>
+  <div><a href="#like"><img src="like_logo.png" class="avatar_scroll"/></a></div>
+  <div><a href="#contact"><img src="mail_logo.jpg" class="avatar_scroll"/></a></div>
+  <div><a href="#qrcoder"><img src=QR.jpg class="avatar_text"/> </a></div>
+  <div onscroll="scroll_Func();"><a href="#menu" ><img src="photos\football.jpg" id="pic" class="avatar_scroll"></a></div>
+</ul_down_right>
 </div>
 <br/>
 <h3>
   <br/>
   <br/>
-  <h2 id="demo" style="color: black;">
-    <audio id="myAudio" controls autoplay>
-      <source src="hi.ogg" type="audio/ogg">
-    </audio>
+  <div class="fly_face"></div>
+  <h2 id="demo" >
   </h2>
   <!-- <img src=photos\s1.jpeg class="avatar_header"/><img src=photos\s2.jpeg class="avatar_header"/><img src=photos\s3.jpeg class="avatar_header"/><img src=photos\s4.jpeg class="avatar_header"/><img src=photos\s5.jpeg class="avatar_header"/><img src=photos\s6.jpeg class="avatar_header"/><img src=photos\s7.jpeg class="avatar_header"/> -->
   <br/>
@@ -330,7 +334,38 @@
       <td>Comment: <br><textarea id="mytextarea" placeholder="e.g Hi Ivar, U R the best dog ever and I love U, but..." ></textarea></td>
     </tr>
     <tr>
-      <td><button class="button" id="send_email" onclick="sendMail();">Send</button>
+      <td><button class="button" id="send_email" onclick="sendMail();">Send</button><br>
+        <div class="cube-container">
+          <div class="cube">
+            <div class="cube__face front"></div>
+            <div class="cube__face back"></div>
+            <div class="cube__face right"></div>
+            <div class="cube__face left"></div>
+            <div class="cube__face top"></div>
+            <div class="cube__face bottom"></div>
+          </div>
+        </div>
+          <div class="cube-container">
+          <div class="cube">
+            <div class="cube__face front1"></div>
+            <div class="cube__face back1"></div>
+            <div class="cube__face right1"></div>
+            <div class="cube__face left1"></div>
+            <div class="cube__face top1"></div>
+            <div class="cube__face bottom1"></div>
+          </div>
+        </div>
+          </div>
+          <div class="cube-container">
+          <div class="cube">
+            <div class="cube__face front2"></div>
+            <div class="cube__face back2"></div>
+            <div class="cube__face right2"></div>
+            <div class="cube__face left2"></div>
+            <div class="cube__face top2"></div>
+            <div class="cube__face bottom2"></div>
+          </div>
+        </div>
         <!-- <input type="submit" value="Send"> -->
       </td>
     </tr>
@@ -382,7 +417,7 @@ $(function(){
 <script>
   function heyU() {
     let text;
-    let person = prompt("Good to see you here !\n Please enter your name:", "Harry Potter");
+    let person = prompt("Good to see you here !\n Please enter your name:");
     if (person == null || person == "") {
       text = "I wonder why you did not want to tell us your name ... Playing yourself mysterious?";
     } else {
@@ -390,6 +425,26 @@ $(function(){
     }
     document.getElementById("demo").innerHTML = text;
   }
+
+  function scroll_Func() {
+    let rand = (Math.floor(Math.random() * 4) ) ;
+    if ( rand==0) {
+      document.getElementById("pic").src = "photos\\beach.jpg";
+      document.getElementById("face").src = "photos\\face.jpg";
+    } else if (rand==1) {
+      document.getElementById("pic").src = "photos\\rrr.jpeg"; 
+      document.getElementById("face").src = "photos\\s1.jpeg";
+    } else if(rand==2) {
+      document.getElementById("pic").src = "photos\\football.jpg"; 
+      document.getElementById("face").src = "photos\\pi.png";
+    } else {
+      document.getElementById("pic").src = "photos\\ball.jpg"; 
+      document.getElementById("face").src = "photos\\beach1.jpg";
+    }
+  }
+  </script>
+
+
   </script>
 </body>
 </html>
